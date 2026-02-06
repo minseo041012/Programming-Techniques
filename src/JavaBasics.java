@@ -1,10 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /*
         Name: Minseo KIM
@@ -21,7 +17,7 @@ public class JavaBasics {
         int n, m, a = 0, b;
         String name, surname;
 
-        // Number 2: To make 2d array
+        // Number 3: To make 2d array
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your name: ");
         name = sc.nextLine();
@@ -33,7 +29,7 @@ public class JavaBasics {
 
         int[][] myArray = new int[n][m];
 
-        // Number 3: Count vowels in name
+        // Number 4: Count vowels in name
         for (int i = 0; i < n; i++) {
             char c = Character.toLowerCase(name.charAt(i));
             if (c == 'a' || c == 'e' || c == 'i' || c == 'u' || c == 'o') {
@@ -62,7 +58,7 @@ public class JavaBasics {
             System.out.println();
         }
 
-        // Number 4: Row and column averages
+        // Number 5: Row and column averages
         double[] row_average = new double[n];
         double[] col_average = new double[m];
 
@@ -90,7 +86,7 @@ public class JavaBasics {
             System.out.printf("%.4f ", v);
         }
 
-        // Number 5: Count values greater than row average
+        // Number 6: Count values greater than row average
         System.out.println("\n\nNumber 5:");
         for (int i = 0; i < n; i++) {
             int count = 0;
@@ -146,22 +142,5 @@ public class JavaBasics {
 
         System.out.println("Column index with minimum average: " + idx);
         System.out.println("Min value in that column: (" + minRowIndex + ", " + idx + ") = " + min);
-
-        // Number 10: Frequency of numbers in 2D array
-        System.out.println("\nNumber 10:");
-        HashMap<Integer, Integer> map = new HashMap<>();
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                map.put(myArray[i][j], map.getOrDefault(myArray[i][j], 0) + 1);
-            }
-        }
-
-        List<Map.Entry<Integer, Integer>> list = new ArrayList<>(map.entrySet());
-        list.sort((e1, e2) -> e2.getValue() - e1.getValue());
-
-        for (Map.Entry<Integer, Integer> entry : list) {
-            System.out.println("Key: " + entry.getKey() + ", Frequency: " + entry.getValue());
-        }
     }
 }

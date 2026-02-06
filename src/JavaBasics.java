@@ -7,14 +7,14 @@ import java.util.List;
 import java.util.Map;
 
 /*
-        Name: Minseo KIM
-        Faculty: Fundamental science
-        Student number: 20253361
+       Name: Minseo KIM
+       Group: ITfu-24/1
+       Student number: 20253361
 */
 
-/*
-        JavaBasics class demonstrates operations with 2D arrays:
-        random generation, averages, sorting, and frequency analysis.
+/**
+*        JavaBasics class demonstrates operations with 2D arrays:
+*        random generation, averages, sorting, and frequency analysis.
 */
 public class JavaBasics {
     public static void main(String args[]) {
